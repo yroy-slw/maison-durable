@@ -97,6 +97,27 @@ Template Name: Optimisation
 				</div>
 			</div>
 		</div>
+		<!---->
+		<div class="two-cols">
+			<article class="same">
+				<div class="text-split">
+					Avant
+					<span>rénovation</span>
+				</div>
+				<div class="image-split">
+					<img src="<?php bloginfo('template_url'); ?>/img/avant.png">
+				</div>
+			</article>
+			<article class="same">
+				<div class="text-split">
+					Après
+					<span>rénovation</span>
+				</div>
+				<div class="image-split">
+					<img src="<?php bloginfo('template_url'); ?>/img/apres.png">
+				</div>
+			</article>
+		</div>
 
 		<div id="expertise" class="bandeau">
 			<div class="inner-bandeau">

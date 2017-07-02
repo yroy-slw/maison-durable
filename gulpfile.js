@@ -27,9 +27,9 @@ gulp.task('less', function () {
 });
 
 //Configuration FTP
-var user = 'fjcg_yroydev';
-var password = 'kenshiro1982';
-var host = 'fjcg.ftp.sharedbox.com'; 
+var user = '...';
+var password = '...';
+var host = '...'; 
 var port = 21; 
 var localFilesGlob = ['./**/*'];
 var remoteFolder = '/web/site_2017/wp-content/themes/'

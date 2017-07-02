@@ -1,1 +1,2 @@
 # maison-durable
+Wp theme

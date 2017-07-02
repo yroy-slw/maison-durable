@@ -444,7 +444,7 @@ a:hover {
         nav {
             width:auto;
             padding-bottom:0px;
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1300px) {
                 width:100%;
                 top:-21px;
                 padding-top:20px;
@@ -457,7 +457,7 @@ a:hover {
                         font-size:16px;
                         span {
                             display:none;
-                             @media screen and (max-width: 1024px) {
+                             @media screen and (max-width: 1300px) {
                                 display:block;
                             }
                         }
@@ -1069,19 +1069,30 @@ a:hover {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-    }
-    .header-interne nav ul li a span {
-        display: none;
-    }
-    .header-interne nav ul li a {
-        font-size: 16px;
-    }
-    .header-interne nav ul {
-        width: inherit;
-    }
-    .header-interne nav {
-        width: auto;
-        padding-bottom: 0;
+        nav {
+            width:auto;
+            padding-bottom:0px;
+            @media screen and (max-width: 1300px) {
+                width:100%;
+                top:-21px;
+                padding-top:20px;
+                padding-bottom:20px;
+            }
+            ul {
+                width:inherit;
+                li {
+                    a {
+                        font-size:16px;
+                        span {
+                            display:none;
+                             @media screen and (max-width: 1300px) {
+                                display:block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1231,7 +1242,7 @@ strong {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
 
     nav a:hover {
         color:#fff !important;

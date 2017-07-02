@@ -18,9 +18,21 @@
 <script src="https://use.fontawesome.com/b4d3cfc793.js"></script>
 <script>
 jQuery(document).ready(function($) {
+
 	$(".phone").click(function(){
-		$("nav").slideToggle();
+		var ws = $( window ).width();
+		if(ws <= 1300) {
+			$("nav").slideToggle();
+		}
 	});
+
+	$(window).resize(function(){
+		var ws = $( window ).width();
+		if(ws >= 1300) {
+			$("nav").show();
+		}
+	});
+
 	$("footer").click(function(){
 		$(".overlay-footer").toggleClass("pop");
 	});

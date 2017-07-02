@@ -1,0 +1,20 @@
+/*
+Theme Name: Mandel Website
+*/
+@import url('css/global.css');
+@import url('css/swiper.min.css');
+@import url('styles.css');
+@font-face {
+    font-family: 'Conv_ufonts.com_aaux-proregular-osf';
+    src: url('fonts/ufonts.com_aaux-proregular-osf.eot');
+    src: local('☺'), url('fonts/ufonts.com_aaux-proregular-osf.woff') format('woff'), url('fonts/ufonts.com_aaux-proregular-osf.ttf') format('truetype'), url('fonts/ufonts.com_aaux-proregular-osf.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Conv_ufonts.com_aaux-probold';
+    src: url('fonts/ufonts.com_aaux-probold.eot');
+    src: local('☺'), url('fonts/ufonts.com_aaux-probold.woff') format('woff'), url('fonts/ufonts.com_aaux-probold.ttf') format('truetype'), url('fonts/ufonts.com_aaux-probold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

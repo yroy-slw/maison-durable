@@ -1,0 +1,40 @@
+	<div class="main-new">
+		<div class="row-top-home">
+			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-maison-durable-home.jpg" alt="amandel Logo centrale d'achats"></a>
+		</div>
+
+		<nav>
+			<ul class="main-nav">
+			    {% for item in menu.get_items %}
+		                <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
+		                    {% if item.get_children %}
+		            	        <ul class="nav-drop">
+		                          {% for child in item.get_children %}
+		                            <li class="nav-drop-item"><a href="{{child.get_link}}">{{child.title}}</a></li>
+		                          {% endfor %}
+		                        </ul>
+		                     {% endif %}
+		                </li>
+			    {% endfor %}
+			</ul>
+		</nav>
+
+
+		<div class="content-home">
+
+			<!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide"><img src="<?php bloginfo('template_url'); ?>/img/home.png" alt="home page"></div>
+		        </div>
+		        <div class="overlay-slider">
+					<h1>Bureau technique spécialisé dans <span class="bold">l’économie d'énergie</span> avec expertise CECB® et dans <span class="bold">le développement durable</span> de l’environnement bâti, pour tous <span class="bold">vos projets de construction et de rénovation.</span>
+					</h1>
+		        </div>
+			</div>
+			<div class="swiper-button-next">
+				<img src="<?php bloginfo('template_url'); ?>/img/arrow-right.png" alt="maison durable">
+			</div>
+		</div>
+
+	</div>

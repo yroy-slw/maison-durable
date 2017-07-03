@@ -15,7 +15,19 @@ echo $firstCategory = $category[0]->cat_name;
 		<section class="content-cols center-test <?php if( get_field('type_de_realisation') == 'construction' ): ?>reverse<?php endif; ?>">
 			<div class="content-single">
 				<h2 class="back">< Retour aux réalisations</h2>
-				<img src="<?php the_field('vignettes'); ?>">
+				<!--<img src="<?php the_field('vignettes'); ?>">-->
+				<div class="internal-slider">
+					<div class="swiper-container4">
+			    		<div class="swiper-wrapper">
+							<?php while ( have_rows('galerie_dimages') ) : the_row(); ?>
+								<div class="swiper-slide">
+		        					<img src="<?php the_sub_field('images'); ?>">
+		        				</div>
+		    				<?php endwhile; ?>
+		    			</div>
+		    			<div class="swiper-pagination"></div>
+		    		</div>
+				</div>
 			</div>
 			<!--<div class="post-card">
 				<h1><?php the_field("titre_complet"); ?></h1>

@@ -16,6 +16,8 @@
 <?php wp_enqueue_script('jquery'); ?>
 <?php wp_head(); ?>
 <script src="https://use.fontawesome.com/b4d3cfc793.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.event.move.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.twentytwenty.js"></script>
 <script>
 jQuery(document).ready(function($) {
 
@@ -55,8 +57,9 @@ jQuery(document).ready(function($) {
 		$(".ajax-content-cat").load(url, function() {
 			$(".loader").fadeOut();
 			$(".swiper-container2").remove();
+			$(".swiper-container4").remove();
 
-			 var swiper = new Swiper('.swiper-container3', {
+			var swiper = new Swiper('.swiper-container3', {
 		        pagination: '.swiper-pagination',
 		        slidesPerView: 2,
 		        paginationClickable: true,
@@ -84,6 +87,14 @@ jQuery(document).ready(function($) {
 		$(".ajax-content-post").load(urlPost, function() {
 			$(this).addClass("moveLeft");
 			$(".loader").fadeOut();
+			var swiper = new Swiper('.swiper-container4', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        loop: true,
+		        autoplay: 2000,
+		        speed: 800
+		    });
 		});
 
 		return false;

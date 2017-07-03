@@ -16,6 +16,8 @@
 <?php wp_enqueue_script('jquery'); ?>
 <?php wp_head(); ?>
 <script src="https://use.fontawesome.com/b4d3cfc793.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.event.move.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.twentytwenty.js"></script>
 <script>
 jQuery(document).ready(function($) {
 

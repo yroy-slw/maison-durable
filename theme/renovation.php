@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Optimisation
+Template Name: Rénovation
 */
 ?>
 <?php get_header(); ?>
@@ -22,33 +22,35 @@ Template Name: Optimisation
 
 <div class="page">
 	<div class="full-title">
-		<h1><?php the_field("titre_page", false, false); ?></h1>
+		<h1 class="dark-color"><?php the_field("titre_page", false, false); ?></h1>
 	</div>
 	<div class="entete">
-		<h2><?php the_field("titre"); ?></h2>
+		<h2 class="dark-color"><?php the_field("titre"); ?></h2>
 	</div>
 
 
 	<section class="page-optimisation">
 
 		<div class="two-cols">
-			<article>
-				<div class="title-img">
-					<img src="<?php bloginfo('template_url'); ?>/img/arrow-light.png">
-					<h1 id="op"><?php the_field("titre_1"); ?></h1>
-				</div>
-				<p class="optimisation"><?php the_field("text_1"); ?></p>
-			</article>
-			<article class="fonce">
+			<article class="minus">
 				<div class="title-img">
 					<img src="<?php bloginfo('template_url'); ?>/img/arrow-dark.png">
-					<h1 id="ex"><?php the_field("titre_2"); ?></h1>
+					<h1 class="dark-color" id="op"><?php the_field("titre_1"); ?></h1>
 				</div>
-				<p class="expertise"><?php the_field("text_2"); ?></p>
+				<p class="dark-color optimisation"><?php the_field("text_1"); ?></p>
+			</article>
+			<article class="minus fonce">
+				<div class="title-img">
+					<img src="<?php bloginfo('template_url'); ?>/img/arrow-dark.png">
+					<h1 class="dark-color" id="ex"><?php the_field("titre_2"); ?></h1>
+				</div>
+				<div class="dark-color">
+				<p class="dark-color expertise"><?php the_field("text_2"); ?></p>
+				</div>
 			</article>
 		</div>
 
-		<div id="optimisation" class="bandeau light">
+		<div id="optimisation" class="bandeau">
 			<div class="inner-bandeau">
 				<?php the_field("bandeau_1"); ?>
 			</div>
@@ -58,19 +60,30 @@ Template Name: Optimisation
 		<div class="three-cols">
 			<div class="inner">
 				<div class="accroche">
-					Notre expertise
-					en 3 étapes 
+					Rénovation
+					en 2 temps
 				</div>
 
-				<div class="box-border">
-					<div class="box">
+				<div class="box-border dark-border">
+					<div class="box extra">
 						<?php the_field("analyse"); ?>
 					</div>
-					<div class="box">
+					<div class="box extra">
 						<?php the_field("planification"); ?>
 					</div>
-					<div class="box">
+					<div class="box extra">
 						<?php the_field("execution"); ?>
+					</div>
+
+					<div class="box">
+						<?php the_field("contenu_additionnel"); ?>
+					</div>
+					<div class="box">
+						<?php the_field("contenu_additionnel_2"); ?>
+					</div>
+
+					<div class="box">
+						&nbsp;
 					</div>
 
 				</div>
@@ -80,44 +93,22 @@ Template Name: Optimisation
 		<div class="button">
 			<div class="left-button">&nbsp;</div>
 			<div class="right-button">
-				<a href="http://maisondurable.ch/realisations/">voir les réalisations</a>
+				<a class="bgdark" href="http://maisondurable.ch/realisations/">voir les réalisations</a>
 			</div>
 		</div>
 
 		<div class="three-cols">
 			<div class="inner">
 				<div class="accroche">
-					Nos outils
 				</div>
-
-				<div class="box-border">
-					<div class="remove">
-						<?php the_field("outils"); ?>
+				<div class="box-border dark-border no-bord">
+					<div class="remove centeri">
+						<img src="<?php the_field("encart_image"); ?>">
 					</div>
 				</div>
 			</div>
 		</div>
-		<!---->
-		<div class="two-cols">
-			<article class="same">
-				<div class="text-split">
-					Avant
-					<span>rénovation</span>
-				</div>
-				<div class="image-split">
-					<img src="<?php the_field('image_avant'); ?>" alt="avant">
-				</div>
-			</article>
-			<article class="same">
-				<div class="text-split">
-					Après
-					<span>rénovation</span>
-				</div>
-				<div class="image-split">
-					<img src="<?php the_field('image_apres'); ?>" alt="après">
-				</div>
-			</article>
-		</div>
+		
 
 		<div id="expertise" class="bandeau">
 			<div class="inner-bandeau">
@@ -125,44 +116,36 @@ Template Name: Optimisation
 			</div>
 		</div>
 
-		<div class="three-cols">
+		<div class="three-cols big-margin lighter">
 			<div class="inner">
 				<div class="accroche">
-					C’est quoi
-					le CECB ? 
+					<span class="fixth">Construction<br/>
+					en 3 étapes</span>
 					<a href="">
 						<img class="pos" src="<?php bloginfo('template_url'); ?>/img/plus.png">
 					</a>
 				</div>
-
-				<div class="box-border nobord">
-					<div class="remove">
-						<?php the_field("cecb"); ?>
+				<div class="box-border dark-border">
+					<div class="dark-color box">
+						<?php the_field("inspection"); ?>
+					</div>
+					<div class="dark-color box">
+						<?php the_field("bilan_energetique"); ?>
+					</div>
+					<div class="dark-color box">
+						<?php the_field("mesures"); ?>
+					</div>
+					<div class="dark-color box">
+						&nbsp;
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="three-cols big-margin lighter">
-			<div class="inner">
-				<div class="accroche">
-					Notre analyse
-					par étapes 
-				</div>
-				<div class="box-border">
-					<div class="box">
-						<?php the_field("inspection"); ?>
-					</div>
-					<div class="box">
-						<?php the_field("bilan_energetique"); ?>
-					</div>
-					<div class="box">
-						<?php the_field("mesures"); ?>
-					</div>
-					<div class="box">
-						<?php the_field("resultats"); ?>
-					</div>
-				</div>
+		<div class="button final-elem">
+			<div class="left-button">&nbsp;</div>
+			<div class="right-button">
+				<a class="bgdark" href="http://maisondurable.ch/realisations/">voir les projets en cours</a>
 			</div>
 		</div>
 

@@ -57,8 +57,9 @@ jQuery(document).ready(function($) {
 		$(".ajax-content-cat").load(url, function() {
 			$(".loader").fadeOut();
 			$(".swiper-container2").remove();
+			$(".swiper-container4").remove();
 
-			 var swiper = new Swiper('.swiper-container3', {
+			var swiper = new Swiper('.swiper-container3', {
 		        pagination: '.swiper-pagination',
 		        slidesPerView: 2,
 		        paginationClickable: true,
@@ -86,6 +87,14 @@ jQuery(document).ready(function($) {
 		$(".ajax-content-post").load(urlPost, function() {
 			$(this).addClass("moveLeft");
 			$(".loader").fadeOut();
+			var swiper = new Swiper('.swiper-container4', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        loop: true,
+		        autoplay: 2000,
+		        speed: 800
+		    });
 		});
 
 		return false;

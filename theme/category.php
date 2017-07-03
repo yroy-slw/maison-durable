@@ -20,4 +20,5 @@
 
 <?php endwhile; endif; ?>
 </div>
+<div class="swiper-pagination"></div>
 </div>

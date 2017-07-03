@@ -1819,6 +1819,73 @@ strong {
 }
 
 
+.final-flex {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:0px 30px;
+    max-width:1200px;
+    margin:0px auto;
+    margin-bottom:120px;
+    margin-top:40px;
+    .first-elem {
+        text-align:center;
+        @media screen and (max-width: 640px) {
+            display:none;
+        }
+        img#logo-first {
+            width:100%;
+            max-width:242px;
+        }
+        a {
+            width:100%;
+            display:block;
+            img#lien {
+                width:100%;
+                max-width:94px;
+            }
+        }
+    }
+    .elem {
+        width:32%;
+        @media screen and (max-width: 640px) {
+            width:100%;
+            margin-bottom:30px;
+        }
+        img {
+            width:100%;
+        }
+        .inner-elem {
+            width:100%;
+            background:#432a19;
+            padding:30px;
+            h2 {
+                color:#fff;
+                border-bottom:1px solid #fff;
+                margin:0px;
+                padding:0px;
+                font-size:25px;
+                padding-bottom:10px;
+                margin-bottom:30px;
+            }
+            p {
+                color:#fff;
+                margin:0px;
+                padding:0px;
+                text-align:left;
+                font-size:20px;
+                font-family: 'Conv_ufonts.com_aaux-proregular-osf';
+            }
+            .min {
+                font-size: 14px;
+                line-height: 18px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
         background-image: none;

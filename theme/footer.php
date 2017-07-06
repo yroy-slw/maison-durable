@@ -1,4 +1,23 @@
 <?php wp_footer(); ?>
+
+
+<div class="overlay-lien"></div>
+<div class="modal-lien">
+  <div class="modal-inner">
+  <?php 
+    query_posts(array( 
+        'post_type' => 'gmap',
+        'showposts' => 1 
+    ) );  
+
+while (have_posts()) : the_post(); ?>
+  <div style="position:relative;" <?php if(function_exists("live_edit")){ live_edit('liens'); }?>>
+      <?php the_field("liens"); ?>
+  </div>
+    <?php endwhile; ?>
+  </div>
+</div>
+
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 
 <script>
@@ -207,9 +226,9 @@ while (have_posts()) : the_post(); ?>
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: <?php echo $adresse2['lat']; ?>, lng: <?php echo $adresse2['lng']; ?>},
           scrollwheel: false,
-          draggable: false,
+          draggable: true,
           navigationControl: false,
-        mapTypeControl: false,
+          mapTypeControl: false,
           zoom: 9
         });
 
@@ -229,7 +248,7 @@ while (have_posts()) : the_post(); ?>
         var map2 = new google.maps.Map(document.getElementById('map2'), {
           center: {lat: <?php echo $adresse1['lat']; ?>, lng: <?php echo $adresse1['lng']; ?>},
           scrollwheel: false,
-          draggable: false,
+          draggable: true,
           navigationControl: false,
           mapTypeControl: false,
           zoom: 9
@@ -259,7 +278,37 @@ while (have_posts()) : the_post(); ?>
 					<i class="fa fa-times" aria-hidden="true"></i>
 
 				</div>
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-contact.png" alt="contactez maisondurable.ch">
+				<!--<img src="<?php bloginfo('template_url'); ?>/img/logo-contact.png" alt="contactez maisondurable.ch">-->
+        <div class="footer-top">
+            <div class="left">
+              <img id="contact" src="<?php bloginfo('template_url'); ?>/img/logo-footer-left.jpg" alt="contactez maisondurable.ch">
+            </div>
+            <div class="right">
+              <img id="log" src="<?php bloginfo('template_url'); ?>/img/logo-footer-right.jpg" alt="contactez maisondurable.ch">
+              <div class="box">
+                <div class="icon">
+                  <img src="<?php bloginfo('template_url'); ?>/img/pointer_2.png" alt="contactez maisondurable.ch">
+                </div>
+                <div class="content">
+                  <h2>Ayer</h2>
+                  <p>Le bureau se trouve au rez inférieur<br/>
+                  dans le même immeuble que le Restaurant Chinois "Qi - Lin"</p>
+                  <span class="bolde">
+                    Possibilité de se parquer devant l'immeuble.
+                  </span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="icon">
+                  <img src="<?php bloginfo('template_url'); ?>/img/pointer_2.png" alt="contactez maisondurable.ch">
+                </div>
+                <div class="content">
+                  <h2>Orsieres</h2>
+                  <p>Le bureau se trouve dans une rue passante.</p>
+                </div>
+              </div>
+            </div>
+        </div>
 			</div>
 		</div>
 		<div class="footer-middle">

@@ -14,7 +14,7 @@ Template Name: Realisations
 <div class="main-new-interne">
 	<div class="ajax-content-post"></div>
 	<div class="header-interne">
-		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne.png" alt=""></a>
+		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne-final.jpg" alt=""></a>
 		<nav class="page-interne">
 			<?php wp_nav_menu( array( 'theme_location' => 'pages' ) ); ?>
 		</nav>
@@ -24,7 +24,7 @@ Template Name: Realisations
 		<h2>Réalisations<br/>Portfolio</h2>
 	</div>-->
 
-	<div class="full-title">
+	<div class="full-title wow slideInUp" data-wow-duration="1s">
 		<h1><strong>Réalisations</strong><br/>Portfolio</h1>
 	</div>
 
@@ -41,7 +41,7 @@ Template Name: Realisations
 
 						<div class="swiper-slide">
 							<div class="content-single">
-								<div class="box">
+								<div class="box" <?php if(function_exists("live_edit")){ live_edit('post_title, vignettes, type_de_realisation, type, texte_vignettes, galerie_dimages, texte_indice'); }?>>
 									<a class="post-ajax" href="<?php the_permalink(); ?>">
 										<img src="<?php the_field('vignettes'); ?>">
 										<div class="overlay-vignette <?php if( get_field('type_de_realisation') == 'construction' ): ?>overlay-construction<?php endif; ?>">

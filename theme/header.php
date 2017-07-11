@@ -44,6 +44,8 @@ jQuery(document).ready(function($) {
 	});
 	$(".close-footer").click(function(){
 		$(".overlay-footer").removeClass("pop");
+		$(".overlay-lien").fadeOut();
+		$(".modal-lien").fadeOut();
 	});
 
 
@@ -135,6 +137,10 @@ jQuery(document).ready(function($) {
 </div>
 			<a class="liens-partenaires" href="">Liens &nbsp;</a>
 			<a class="" href="http://maisondurable.ch/maison-durable/"> | Présentation MD</a>
+			<?php if( current_user_can('administrator') ) {  ?> 
+				<a class="super-admin" href="http://maisondurable.ch/edition-posts/">Editer les réalisations</a>
+				<a class="super-admin" href="http://maisondurable.ch/ajouter-realisation/">Ajouter une réalisation</a>
+			<?php } ?>
 		</div>
 	</header>
 					

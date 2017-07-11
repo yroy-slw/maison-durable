@@ -459,6 +459,10 @@ a:hover {
         overflow:scroll;
         background:#fff;
         padding-top: 90px;
+        position:relative;
+        .close-footer {
+            top:50px !important;
+        }
         p {
             padding:0px;
             margin:0px;
@@ -525,7 +529,13 @@ a:hover {
         }
     }
 }
-
+.delete {
+    background:red;
+    padding:10px;
+    position:absolute;
+    right:0px;
+    top:40px;
+}
 .content-realisations {
     width:@full;
     margin-bottom: 120px;
@@ -962,9 +972,75 @@ li.current_page_item a {
     }
 
 }
+.flex-fff {
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:0px 20px;
+    position:relative;
+    .row-1 {
+        width:50%;
+        padding:0px 20px;
+        @media screen and (max-width: 640px) {
+            width:100%;
+        }
+        p {
+            text-align:left !important;
+            a {
+                padding-left:0px !important;
+            }
+        }
+    }
+}
+.content-footer {
+    p {
+        padding:0px !important;
+        margin:0px !important;
+        color:#fff !important;
+    }
+}
+.remise {
+    a {
+        background:#000 !important;
+        color:#fff !important;
+        display:block;
+        padding:10px;
+    }
+    p {
+        margin:0px important;
+        padding:0px !important;
+    }
+}
 
+.super-admin {
+    text-transform: uppercase;
+    margin-left: 20px;
+    background: #fff;
+    padding: 0px 5px;
+    color: black;
+}
 
-
+.liste {
+    max-width:1200px;
+    padding:0px 30px 120px 30px;
+    margin:0px auto;
+    .liste-elem {
+        position:relative;
+        width:100%;
+        padding-bottom:30px;
+        border-bottom :1px solid #000;
+        margin-bottom:30px;
+        &:last-child {
+            border-bottom:0px;
+            padding-bottom:0px;
+            margin-bottom:0px;
+        }
+        img {
+            max-width:320px;
+            width:100%;
+        }
+    }
+}
 
 
 /*Page optimisation*/
@@ -996,6 +1072,12 @@ li.current_page_item a {
             line-height:45px;
             color:#936037;
             text-transform:uppercase;
+            p {
+                font-size:38px;
+                line-height:45px;
+                color:#936037;
+                text-transform:uppercase;
+             }
         }
     }
 }

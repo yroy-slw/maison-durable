@@ -10,7 +10,6 @@ Template Name: Realisations
 	</div>
 </div>
 
-
 <div class="main-new-interne">
 	<div class="ajax-content-post"></div>
 	<div class="header-interne">
@@ -41,7 +40,7 @@ Template Name: Realisations
 
 						<div class="swiper-slide">
 							<div class="content-single">
-								<div class="box" <?php if(function_exists("live_edit")){ live_edit('post_title, vignettes, type_de_realisation, type, texte_vignettes, galerie_dimages, texte_indice'); }?>>
+								<div class="box">
 									<a class="post-ajax" href="<?php the_permalink(); ?>">
 										<img src="<?php the_field('vignettes'); ?>">
 										<div class="overlay-vignette <?php if( get_field('type_de_realisation') == 'construction' ): ?>overlay-construction<?php endif; ?>">

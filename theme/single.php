@@ -1,7 +1,6 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<div class="content-post">
-
 		<div class="full-title">
 			<h1><strong>Réalisations</strong><br/>Portfolio > <?php $category = get_the_category();
 echo $firstCategory = $category[0]->cat_name;

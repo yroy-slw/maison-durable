@@ -4,6 +4,9 @@
 <div class="overlay-lien"></div>
 <div class="modal-lien">
   <div class="modal-inner">
+  <div class="close-footer">
+          <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
   <?php 
     query_posts(array( 
         'post_type' => 'gmap',
@@ -11,8 +14,24 @@
     ) );  
 
 while (have_posts()) : the_post(); ?>
-  <div style="position:relative;" <?php if(function_exists("live_edit")){ live_edit('liens'); }?>>
-      <?php the_field("liens"); ?>
+  <div style="position:relative;" <?php if(function_exists("live_edit")){ live_edit('block_1, block_2, block_3, block_4'); }?>>
+  <div class="flex-fff">
+    <div class="row-1">
+      <?php the_field("block_1"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_2"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_3"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_4"); ?>
+    </div>
+  </div>
+
+     <!-- <?php the_field("liens"); ?>-->
+
   </div>
     <?php endwhile; ?>
   </div>
@@ -218,8 +237,8 @@ function initMap() {
 while (have_posts()) : the_post(); ?>
 
 
-    <?php $adresse1 = get_field('adresse_1'); ?>
-    <?php $adresse2 = get_field('adresse_2'); ?>
+    <?php $adresse1 = get_field('adresse_1', false, false); ?>
+    <?php $adresse2 = get_field('adresse_2', false, false); ?>
 
     var image = '<?php bloginfo("template_url"); ?>/img/location_pin.png';
 

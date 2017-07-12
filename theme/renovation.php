@@ -13,18 +13,18 @@ Template Name: Rénovation
 
 <div class="page-interne-2">
 	<div class="header-interne">
-		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne.png" alt=""></a>
+		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne-final.jpg" alt=""></a>
 		<nav class="page-interne">
 			<?php wp_nav_menu( array( 'theme_location' => 'pages' ) ); ?>
 		</nav>
 	</div>
 </div>
 
-<div class="page">
-	<div class="full-title">
+<div class="page" <?php if(function_exists("live_edit")){ live_edit('titre_page, titre, titre_1, text_1, titre_2, text_2'); }?>>
+	<div class="full-title wow slideInUp" data-wow-duration="1s">
 		<h1 class="dark-color"><?php the_field("titre_page", false, false); ?></h1>
 	</div>
-	<div class="entete">
+	<div class="entete wow slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 		<h2 class="dark-color"><?php the_field("titre"); ?></h2>
 	</div>
 
@@ -50,14 +50,14 @@ Template Name: Rénovation
 			</article>
 		</div>
 
-		<div id="optimisation" class="bandeau">
+		<div id="optimisation" class="bandeau" <?php if(function_exists("live_edit")){ live_edit('bandeau_1'); }?>>
 			<div class="inner-bandeau">
 				<?php the_field("bandeau_1"); ?>
 			</div>
 		</div>
 
 
-		<div class="three-cols">
+		<div class="three-cols" <?php if(function_exists("live_edit")){ live_edit('analyse, planification, execution, contenu_additionnel, contenu_additionnel_2'); }?>>
 			<div class="inner">
 				<div class="accroche">
 					Rénovation
@@ -97,7 +97,7 @@ Template Name: Rénovation
 			</div>
 		</div>
 
-		<div class="three-cols">
+		<div class="three-cols" <?php if(function_exists("live_edit")){ live_edit('encart_image'); }?>>
 			<div class="inner">
 				<div class="accroche">
 				</div>
@@ -110,13 +110,13 @@ Template Name: Rénovation
 		</div>
 		
 
-		<div id="expertise" class="bandeau">
+		<div id="expertise" class="bandeau" <?php if(function_exists("live_edit")){ live_edit('bandeau_2'); }?>>
 			<div class="inner-bandeau">
 				<?php the_field("bandeau_2"); ?>
 			</div>
 		</div>
 
-		<div class="three-cols big-margin lighter">
+		<div class="three-cols big-margin lighter" <?php if(function_exists("live_edit")){ live_edit('inspection, bilan_energetique, mesures'); }?>>
 			<div class="inner">
 				<div class="accroche">
 					<span class="fixth">Construction<br/>

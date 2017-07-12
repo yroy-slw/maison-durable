@@ -18,6 +18,10 @@
 <script src="https://use.fontawesome.com/b4d3cfc793.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.event.move.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.twentytwenty.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/wow.js"></script>
+              <script>
+              new WOW().init();
+              </script>
 <script>
 jQuery(document).ready(function($) {
 
@@ -40,6 +44,8 @@ jQuery(document).ready(function($) {
 	});
 	$(".close-footer").click(function(){
 		$(".overlay-footer").removeClass("pop");
+		$(".overlay-lien").fadeOut();
+		$(".modal-lien").fadeOut();
 	});
 
 
@@ -111,11 +117,18 @@ jQuery(document).ready(function($) {
     	}, 1000);
 	});
 
+	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+
+	$(".liens-partenaires").click(function(){
+		$(".overlay-lien").fadeToggle();
+		$(".modal-lien").fadeToggle();
+		return false;
+	});
+
 
 });
 </script>
 </head>
-
 <body class="site">
 
 	<header>
@@ -123,7 +136,11 @@ jQuery(document).ready(function($) {
 			<div class="phone"><i class="fa fa-bars" aria-hidden="true"></i>
 </div>
 			<a class="liens-partenaires" href="">Liens &nbsp;</a>
-			<a class="liens-partenaires" href="http://maisondurable.ch/maison-durable/"> | Page maison durable</a>
+			<a class="" href="http://maisondurable.ch/maison-durable/"> | Présentation MD</a>
+			<?php if( current_user_can('administrator') ) {  ?> 
+				<a class="super-admin" href="http://maisondurable.ch/edition-posts/">Editer les réalisations</a>
+				<a class="super-admin" href="http://maisondurable.ch/ajouter-realisation/">Ajouter une réalisation</a>
+			<?php } ?>
 		</div>
 	</header>
 					

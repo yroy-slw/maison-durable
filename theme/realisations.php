@@ -10,11 +10,10 @@ Template Name: Realisations
 	</div>
 </div>
 
-
 <div class="main-new-interne">
 	<div class="ajax-content-post"></div>
 	<div class="header-interne">
-		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne.png" alt=""></a>
+		<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-interne-final.jpg" alt=""></a>
 		<nav class="page-interne">
 			<?php wp_nav_menu( array( 'theme_location' => 'pages' ) ); ?>
 		</nav>
@@ -24,7 +23,7 @@ Template Name: Realisations
 		<h2>Réalisations<br/>Portfolio</h2>
 	</div>-->
 
-	<div class="full-title">
+	<div class="full-title wow slideInUp" data-wow-duration="1s">
 		<h1><strong>Réalisations</strong><br/>Portfolio</h1>
 	</div>
 

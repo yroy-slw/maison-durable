@@ -11,7 +11,7 @@ Template Name: Accueil-final
 		<nav>
 			<?php wp_nav_menu( array( 'theme_location' => 'pages' ) ); ?>
 		</nav>
-		<div class="content-home">
+		<div class="content-home" <?php if(function_exists("live_edit")){ live_edit('slider, slogan'); }?>>
 			<!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">

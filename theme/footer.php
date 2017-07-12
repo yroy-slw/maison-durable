@@ -1,4 +1,42 @@
 <?php wp_footer(); ?>
+
+
+<div class="overlay-lien"></div>
+<div class="modal-lien">
+  <div class="modal-inner">
+  <div class="close-footer">
+          <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+  <?php 
+    query_posts(array( 
+        'post_type' => 'gmap',
+        'showposts' => 1 
+    ) );  
+
+while (have_posts()) : the_post(); ?>
+  <div style="position:relative;" <?php if(function_exists("live_edit")){ live_edit('block_1, block_2, block_3, block_4'); }?>>
+  <div class="flex-fff">
+    <div class="row-1">
+      <?php the_field("block_1"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_2"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_3"); ?>
+    </div>
+    <div class="row-1">
+      <?php the_field("block_4"); ?>
+    </div>
+  </div>
+
+     <!-- <?php the_field("liens"); ?>-->
+
+  </div>
+    <?php endwhile; ?>
+  </div>
+</div>
+
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 
 <script>
@@ -199,17 +237,17 @@ function initMap() {
 while (have_posts()) : the_post(); ?>
 
 
-    <?php $adresse1 = get_field('adresse_1'); ?>
-    <?php $adresse2 = get_field('adresse_2'); ?>
+    <?php $adresse1 = get_field('adresse_1', false, false); ?>
+    <?php $adresse2 = get_field('adresse_2', false, false); ?>
 
     var image = '<?php bloginfo("template_url"); ?>/img/location_pin.png';
 
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: <?php echo $adresse2['lat']; ?>, lng: <?php echo $adresse2['lng']; ?>},
           scrollwheel: false,
-          draggable: false,
+          draggable: true,
           navigationControl: false,
-        mapTypeControl: false,
+          mapTypeControl: false,
           zoom: 9
         });
 
@@ -229,7 +267,7 @@ while (have_posts()) : the_post(); ?>
         var map2 = new google.maps.Map(document.getElementById('map2'), {
           center: {lat: <?php echo $adresse1['lat']; ?>, lng: <?php echo $adresse1['lng']; ?>},
           scrollwheel: false,
-          draggable: false,
+          draggable: true,
           navigationControl: false,
           mapTypeControl: false,
           zoom: 9
@@ -259,7 +297,37 @@ while (have_posts()) : the_post(); ?>
 					<i class="fa fa-times" aria-hidden="true"></i>
 
 				</div>
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-contact.png" alt="contactez maisondurable.ch">
+				<!--<img src="<?php bloginfo('template_url'); ?>/img/logo-contact.png" alt="contactez maisondurable.ch">-->
+        <div class="footer-top">
+            <div class="left">
+              <img id="contact" src="<?php bloginfo('template_url'); ?>/img/logo-footer-left.jpg" alt="contactez maisondurable.ch">
+            </div>
+            <div class="right">
+              <img id="log" src="<?php bloginfo('template_url'); ?>/img/logo-footer-right.jpg" alt="contactez maisondurable.ch">
+              <div class="box">
+                <div class="icon">
+                  <img src="<?php bloginfo('template_url'); ?>/img/pointer_2.png" alt="contactez maisondurable.ch">
+                </div>
+                <div class="content">
+                  <h2>Ayer</h2>
+                  <p>Le bureau se trouve au rez inférieur<br/>
+                  dans le même immeuble que le Restaurant Chinois "Qi - Lin"</p>
+                  <span class="bolde">
+                    Possibilité de se parquer devant l'immeuble.
+                  </span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="icon">
+                  <img src="<?php bloginfo('template_url'); ?>/img/pointer_2.png" alt="contactez maisondurable.ch">
+                </div>
+                <div class="content">
+                  <h2>Orsieres</h2>
+                  <p>Le bureau se trouve dans une rue passante.</p>
+                </div>
+              </div>
+            </div>
+        </div>
 			</div>
 		</div>
 		<div class="footer-middle">

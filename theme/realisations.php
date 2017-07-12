@@ -35,7 +35,7 @@ Template Name: Realisations
 			<div class="swiper-container2">
 			    <div class="swiper-wrapper">
 
-					<?php query_posts('cat=4'); ?>
+					<?php query_posts('cat=6'); ?>
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 						<div class="swiper-slide">
